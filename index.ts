@@ -1,15 +1,14 @@
 
 import { Bot } from 'grammy';
 import mysql from 'mysql2/promise';
-import { Connection } from 'mysql2/typings/mysql/lib/Connection';
-
-
 console.log(process.env.ENV_TYPE);
-const dbConnection = {
-    host: process.env.DATABASE_HOST,
-    user: process.env.DATABASE_USER,
-    database: process.env.DATABASE_URL
-};
+
+const dbURI: string = process.env.DATABASE_UR!;
+
+
+const connection = mysql.createConnection(dbURI).then((value) => {
+    console.log(value);
+}).catch((err: any) => console.log(err));
 
 const token: any = process.env.TELEGRAM_TOKEN;
 const bot = new Bot(token);

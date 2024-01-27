@@ -11,8 +11,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -r dotenv/config index.ts dotenv_config_path=./.env.production",
-    "dev": "nodemon -r dotenv/config index.ts dotenv_config_path=./.env"
+    "start": "nodemon -r dotenv/config index.ts dotenv_config_path=./env/.env.production",
+    "dev": "nodemon -r dotenv/config index.ts dotenv_config_path=./env/.env"
   },
   "repository": {
     "type": "git",
