@@ -1,17 +1,17 @@
 
 import { Bot } from 'grammy';
-import mysql from 'mysql2/promise';
+import { RowDataPacket } from 'mysql2';
+import mysql, { FieldPacket } from 'mysql2/promise';
 
 const dbURI: string = process.env.DATABASE_URL!;
 const token: any = process.env.TELEGRAM_TOKEN;
 const bot = new Bot(token);
 
 console.log(process.env.ENV_TYPE);
-console.log(process.env.ENV_TYPE);
 
-const connection = mysql.createConnection(dbURI).then((connection: mysql.Connection) => {
-    console.log(connection);
-}).catch((err: any) => console.log(err));
+const connection = mysql.createConnection(dbURI).then((conn) => conn.query('SELECT * FROM `usuario`;')).then(([rows, fields]) => {
+    console.log(rows);
+});
 
 
 bot.command("user", (ctx: any) => {
