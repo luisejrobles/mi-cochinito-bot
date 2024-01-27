@@ -1,7 +1,8 @@
-import dotenv from 'dotenv';
-import { Bot } from 'grammy';
-dotenv.config();
 
+import { Bot } from 'grammy';
+
+
+console.log(process.env.ENV_TYPE);
 const token: any = process.env.TELEGRAM_TOKEN;
 const bot = new Bot(token);
 
