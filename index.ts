@@ -12,7 +12,8 @@ bot.command("user", (ctx) => {
 
 bot.command("init", (ctx) =>
     ctx.reply(`Bienvenido a 🐷Micochinito🐷\nBot que te ayudará con tus finanzas personales.🚀
-\nLa primer herramienta (beta) es poder facilitarte con qué tarjeta de crédito pagar en base a la fecha de corte de tu tarjeta más lejana.
+\nLa primer herramienta (beta) es poder facilitarte con qué tarjeta de crédito pagar en base a la fecha de corte de tu tarjeta más lejana
+y así tener más días de liquidez.
 Antes de poder utilizar esta herramienta acá te dejo los comandos disponibles por el momento:\n
 👉 utilizar comando /alta para para dar de alta una nueva tarjeta.\n
 👉 utilizar comando /listar para enlistar las tarjetas dadas de alta.\n
